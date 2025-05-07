@@ -3,53 +3,45 @@ import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
-import SparkleIcon from '@/assets/icons/sparkle.svg';
+import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%, black_70%, transparent, black_90%)]">
+        <div
+          className="absolute inset-0 -z-30 opacity-5"
+          style={{ backgroundImage: `url(${grainImage.src})` }}
+        ></div>
 
-    <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%, black_70%, transparent, black_90%)]">
+        <div className="size-[620px] hero-ring "></div>
 
+        <div className="size-[820px] hero-ring "></div>
 
-      <div
-        className="absolute inset-0 -z-30 opacity-5"
-        style={{ backgroundImage: `url(${grainImage.src})` }}
-      ></div>
+        <div className="size-[1020px] hero-ring "></div>
 
-      <div className="size-[620px] hero-ring "></div>
+        <div className="size-[1220px] hero-ring "></div>
 
-      <div className="size-[820px] hero-ring "></div>
+        <HeroOrbit size={800} rotation={-72} speed={40}>
+          <StarIcon className="size-28 text-emerald-300" />
+        </HeroOrbit>
 
-      <div className="size-[1020px] hero-ring "></div>
+        <HeroOrbit size={550} rotation={20} speed={25}>
+          <StarIcon className="size-12 text-emerald-300" />
+        </HeroOrbit>
 
-      <div className="size-[1220px] hero-ring "></div>
+        <HeroOrbit size={590} rotation={98} speed={35}>
+          <StarIcon className="size-8 text-emerald-300" />
+        </HeroOrbit>
 
-    
-      <HeroOrbit size={800} rotation={-72}>
-        <StarIcon className="size-28 text-emerald-300" />
-      </HeroOrbit>
+        <HeroOrbit size={430} rotation={-14} speed={20}>
+          <SparkleIcon className="size-8 text-emerald-300/20" />
+        </HeroOrbit>
 
-      <HeroOrbit size={550} rotation={20}>
-        <StarIcon className="size-12 text-emerald-300" />
-      </HeroOrbit>
-
-
-      <HeroOrbit size={590} rotation={98}>
-        <StarIcon className="size-8 text-emerald-300" />
-      </HeroOrbit>
-
-
-      <HeroOrbit size={430} rotation={-14}>
-        <SparkleIcon className="size-8 text-emerald-300/20" />
-      </HeroOrbit>
-
-      <HeroOrbit size={440} rotation={79}>
-        <SparkleIcon className="size-8 text-emerald-300/20" />
-      </HeroOrbit>
-
-
+        <HeroOrbit size={440} rotation={79} speed={30}>
+          <SparkleIcon className="size-8 text-emerald-300/20" />
+        </HeroOrbit>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -60,7 +52,10 @@ export const HeroSection = () => {
             alt="Person peeking from behind laptop"
           ></Image>
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
-            <div className="bg-green-500 size-2.5 rounded-full animate-ping"></div>
+            <div className="bg-green-500 size-2.5 rounded-full relative">
+              <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
+            </div>
+
             <div className="text-sm font-medium">
               Available for new projects
             </div>
@@ -69,7 +64,7 @@ export const HeroSection = () => {
 
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl  text-center mt-8 tracking-wide">
-            Building exceptional user experiences
+            Milos Sturanovic
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
             I specialize in transforming ideas into functional, user-friendly
@@ -87,7 +82,6 @@ export const HeroSection = () => {
           </button>
         </div>
       </div>
-      
     </div>
   );
 };
