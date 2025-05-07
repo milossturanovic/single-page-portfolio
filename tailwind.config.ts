@@ -25,6 +25,29 @@ const config: Config = {
         sans: ["var(--font-sans)"],
         serif: ["var(--font-serif)"],
       },
+      animation: {
+        "ping-large": "ping-large 1s ease-in-out infinite",
+        spin: "spin 30s linear infinite",
+        scroll: "scroll 20s linear infinite",
+        "tape-scroll": "tape-scroll 1ms linear forwards",
+      },
+      keyframes: {
+        "ping-large": {
+          "75%, 100%": { transform: "scale(3)", opacity: "0" },
+        },
+        spin: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" }
+        },
+        "tape-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
     },
   },
   plugins: [],
