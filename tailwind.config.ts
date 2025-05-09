@@ -30,6 +30,8 @@ const config: Config = {
         spin: "spin 30s linear infinite",
         scroll: "scroll 20s linear infinite",
         "tape-scroll": "tape-scroll 1ms linear forwards",
+        "move-left": "move-left 30s linear infinite",
+        "move-right": "move-right 30s linear infinite",
       },
       keyframes: {
         "ping-large": {
@@ -41,11 +43,19 @@ const config: Config = {
         },
         scroll: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-100%)" }
-        },
+          "100%": { transform: "translateX(-100%)" },
+        }, // Added comma here
         "tape-scroll": {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-100%)" },
+        },
+        "move-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "move-right": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0%)" },
         },
       },
     },
