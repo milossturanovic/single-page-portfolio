@@ -22,6 +22,24 @@
     }
   }
 
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% / 5));
+    }
+  }
+
+  @keyframes testimonial-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-80%);
+    }
+  }
+
   body {
     animation: tape-scroll linear both;
     animation-timeline: tape-scroll;
@@ -33,6 +51,14 @@
 
   .hero-ring {
     @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5;
+  }
+
+  .animate-marquee {
+    animation: marquee 10s linear infinite;
+  }
+
+  .animate-testimonial-marquee {
+    animation: testimonial-marquee 80s linear infinite;
   }
 }
 
